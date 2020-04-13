@@ -19,18 +19,14 @@ export default class Allmovies extends Component {
                 this.setState({
                     allMoveis: res.data,
                     selectedMoveis: res.data,
+                    loading : true
                       
                 })
-                setTimeout(() => {
-                    this.setState({
-                        loading : true
-                    })
-                }, 3000);
+            
             }).catch(err => console.log(err))
-
-
-
     }
+
+  
 
     filterMoveis = ({target:{value}})=>{
         
